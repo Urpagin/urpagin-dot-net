@@ -1,7 +1,7 @@
 #!/bin/bash
 
-container_name="my-container-name"
-container_port=8000
+container_name="urpagin-dot-net"
+container_port=35000
 
 # Check if the container exists
 if sudo docker inspect $container_name &> /dev/null; then
