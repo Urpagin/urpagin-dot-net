@@ -1,0 +1,8 @@
+:9000 {
+    route /webhook {
+        webhook {
+            command "git -C /website pull"
+            secret "${WEBHOOK_SECRET}"
+        }
+    }
+}

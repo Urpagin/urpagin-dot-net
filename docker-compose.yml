@@ -1,0 +1,31 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: urpagin-dot-net
+    ports:
+      - "51494:80"
+    volumes:
+      - ./website:/usr/share/nginx/html:ro
+    depends_on:
+      - caddy
+    restart: always
+
+  caddy:
+    image: caddy:latest
+    container_name: urpagin-dot-net-webhook-listener
+    ports:
+      - "42047:9000"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./website:/website
+    environment:
+      - GIT_REPO=https://github.com/Urpagin/urpagin-dot-net.git
+    command: >
+      sh -c "
+      if [ ! -d /website/.git ]; then
+        git clone $GIT_REPO /website;
+      else
+        git -C /website pull;
+      fi &&
+      caddy run --config /etc/caddy/Caddyfile"
+    restart: always
