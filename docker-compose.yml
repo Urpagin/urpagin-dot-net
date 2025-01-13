@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   nginx:
     image: nginx:latest
@@ -5,7 +7,7 @@ services:
     ports:
       - "51494:80"
     volumes:
-      - ./website:/usr/share/nginx/html:ro
+      - .:/usr/share/nginx/html:ro
     depends_on:
       - caddy
     restart: always
@@ -17,9 +19,10 @@ services:
       - "42047:9000"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./website:/website
+      - .:/website
     environment:
       - GIT_REPO=https://github.com/Urpagin/urpagin-dot-net.git
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
     command: >
       sh -c "
       if [ ! -d /website/.git ]; then
@@ -27,5 +30,7 @@ services:
       else
         git -C /website pull;
       fi &&
+      docker compose -f /website/docker-compose.yml pull &&
+      docker compose -f /website/docker-compose.yml up -d &&
       caddy run --config /etc/caddy/Caddyfile"
     restart: always

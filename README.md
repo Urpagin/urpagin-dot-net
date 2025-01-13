@@ -11,7 +11,10 @@ A simple, fast, and minimalist personal website.
 - Replace `<secret>` by the output of the `openssl rand -hex 128` linux command.
 - Go to your GitHub repo → Settings → Webhooks
 - Click "Add Webhook"
-- Fill out the fields and add the `<secret>`. 
+- Fill out the fields and add 
+    - Payload URL: `http://your-server-ip:42047/webhook`
+    - Content Type: `application/json`
+    - Secret: `<secret>`
 
 
 3. `docker compose up -d`
