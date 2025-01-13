@@ -1,8 +1,12 @@
-# Use the official Caddy image as a base
-FROM caddy:latest
+# Use a Debian-based Caddy image
+FROM caddy:builder AS builder
 
 # Install git
 RUN apt-get update && apt-get install -y git && apt-get clean
+
+# Final stage
+FROM caddy:latest
+COPY --from=builder /usr/bin/git /usr/bin/git
 
 # Set working directory
 WORKDIR /website
