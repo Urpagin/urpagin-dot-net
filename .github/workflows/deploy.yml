@@ -20,8 +20,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.PROJECT_PATH }}
-            git pull
-            docker stop urpagin-dot-net || true
-            docker container rm urpagin-dot-net || true
-            docker build . -t urpagin-dot-net || 
-            docker run --name urpagin-dot-net -d -p 35037:3000 urpagin-dot-net
+            sudo ./build_and_run.sh
