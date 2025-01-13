@@ -1,22 +1,64 @@
-# sv
+# Urpagin.net
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Deploy on Push (Continuous Deployment with Docker & GitHub Actions)
 
-## Creating a project
+The following steps assume you are working on a Linux machine.
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Steps to Set Up Continuous Deployment:
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. On your **local machine**, generate a new SSH key by running:
+   ```bash
+   ssh-keygen -t ed25519 -f ~/.ssh/deploy_key
+   ```
 
-# create a new project in my-app
-npx sv create my-app
-```
+2. Copy the generated public SSH key to your server (the one where the website will run) by using the following command:
+   ```bash
+   ssh-copy-id -i ~/.ssh/deploy_key.pub user@host
+   ```
 
-## Developing
+3. Go to your GitHub repository and navigate to:
+   **Settings** -> **Secrets and variables** -> **Actions** -> **New repository secret**.  
+   Add the following secrets:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+   - `PROJECT_PATH`: The absolute path where you cloned your repository on the remote server (e.g., `/home/debian/urpagin-dot-net/`).
+   - `SSH_USER`: The username used to log in to your remote server.
+   - `SSH_HOST`: The IP address of the remote server.
+   - `SSH_PRIVATE_KEY`: On your **local machine**, copy the contents of the `~/.ssh/deploy_key` file, which contains the private SSH key.
+
+4. On your remote server, run the `build_and_run.sh` script to start the project.  
+   From this point onward, any `git push` action to the `master` branch will automatically trigger the `build_and_run.sh` script, via SSH, to update the website.
+
+---
+
+## Manual Deployment (Using Docker)
+
+On your remote server, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Urpagin/urpagin-dot-net.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd urpagin-dot-net/
+   ```
+
+3. Make the `build_and_run.sh` script executable:
+   ```bash
+   chmod +x build_and_run.sh
+   ```
+
+4. Run the script:
+   ```bash
+   ./build_and_run.sh
+   ```
+
+## Manual Deployment (Using npm)
+
+### Developing
+
+Start a development server:
 
 ```bash
 npm run dev
@@ -25,14 +67,11 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
-
 ```bash
 npm run build
 ```
-
 You can preview the production build with `npm run preview`.
-
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
