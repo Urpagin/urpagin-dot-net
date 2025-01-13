@@ -1,28 +1,38 @@
-# Urpagin.net
+# sv
 
-A simple, fast, and minimalist personal website.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+## Creating a project
 
-# Setup
+If you're seeing this, you've probably already done this step. Congrats!
 
-1. Clone the repo
+```bash
+# create a new project in the current directory
+npx sv create
 
-2. Create the `.env` file and add a `WEBHOOK_SECRET=<secret>` field.
-- Replace `<secret>` by the output of the `openssl rand -hex 128` linux command.
-- Add `GIT_REPO=<current_git_repo_url(here https://github.com/Urpagin/urpagin-dot-net.git)>`
-- Go to your GitHub repo → Settings → Webhooks
-- Click "Add Webhook"
-- Fill out the fields and add 
-    - Payload URL: `http://your-server-ip:42047/webhook`
-    - Content Type: `application/json`
-    - Secret: `<secret>`
+# create a new project in my-app
+npx sv create my-app
+```
 
+## Developing
 
-3. `docker compose up -d`
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-4. Up & running at `your_server_ip:42047`
+```bash
+npm run dev
 
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-# Caddy ?
+## Building
 
-In order to update the website as soon as there is a git push on the `master` branch.
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

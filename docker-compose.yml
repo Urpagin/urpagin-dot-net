@@ -1,37 +1,8 @@
 services:
-  nginx:
-    image: nginx:latest
+  urpagin-dot-net:
     container_name: urpagin-dot-net
-    ports:
-      - "51494:80"
-    volumes:
-      - ./website:/usr/share/nginx/html:ro
-    depends_on:
-      - caddy
-    restart: always
-
-  caddy:
     build:
       context: .
-      dockerfile: Dockerfile.caddy
-    container_name: urpagin-dot-net-webhook-listener
+      dockerfile: Dockerfile
     ports:
-      - "42047:9000"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - .:/website
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - GIT_REPO=${WEBHOOK_SECRET}
-      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
-    command: >
-      sh -c "
-      if [ ! -d /website/.git ]; then
-        git clone $GIT_REPO /website;
-      else
-        git -C /website pull;
-      fi &&
-      docker compose -f /website/docker-compose.yml pull &&
-      docker compose -f /website/docker-compose.yml up -d &&
-      caddy run --config /etc/caddy/Caddyfile"
-    restart: always
+      - "8080:3000"

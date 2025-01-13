@@ -1,8 +1,0 @@
-:9000 {
-    route /webhook {
-        webhook {
-            command "git -C /website pull && docker compose -f /website/docker-compose.yml pull && docker compose -f /path/to/docker-compose.yml up -d"
-            secret "${WEBHOOK_SECRET}"
-        }
-    }
-}
