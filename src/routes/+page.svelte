@@ -29,7 +29,7 @@
 <!-- Audio section -->
 <h2>A Nice Little Song</h2>
 <audio controls preload="none">
-	<source src="/music/fly_me_to_the_moon.flac" type="audio/flac" />
+	<source src="/music/fly_me_to_the_moon.ogg" type="audio/flac" />
 	Your browser does not support the audio element.
 </audio>
 
@@ -40,7 +40,7 @@
 <p><strong>Release Date:</strong> October 25, 1995</p>
 <p><strong>Anime:</strong> Neon Genesis Evangelion</p>
 <p>
-	<strong>Source:</strong>
+	<strong>Source (original FLAC quality):</strong>
 	<a href="https://archive.org/details/evangelion-fmttm" target="_blank"
 		>https://archive.org/details/evangelion-fmttm</a
 	>
