@@ -7,11 +7,13 @@ The following steps assume you are working on a Linux machine.
 ### Steps to Set Up Continuous Deployment:
 
 1. On your **local machine**, generate a new SSH key by running:
+
    ```bash
    ssh-keygen -t ed25519 -f ~/.ssh/deploy_key
    ```
 
 2. Copy the generated public SSH key to your server (the one where the website will run) by using the following command:
+
    ```bash
    ssh-copy-id -i ~/.ssh/deploy_key.pub user@host
    ```
@@ -35,16 +37,19 @@ The following steps assume you are working on a Linux machine.
 On your remote server, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Urpagin/urpagin-dot-net.git
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd urpagin-dot-net/
    ```
 
 3. Make the `build_and_run.sh` script executable:
+
    ```bash
    chmod +x build_and_run.sh
    ```
@@ -70,8 +75,11 @@ npm run dev -- --open
 ### Building
 
 To create a production version of your app:
+
 ```bash
 npm run build
 ```
+
 You can preview the production build with `npm run preview`.
+
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
