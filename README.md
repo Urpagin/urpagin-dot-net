@@ -9,6 +9,7 @@ A simple, fast, and minimalist personal website.
 
 2. Create the `.env` file and add a `WEBHOOK_SECRET=<secret>` field.
 - Replace `<secret>` by the output of the `openssl rand -hex 128` linux command.
+- Add `GIT_REPO=<current_git_repo_url(here https://github.com/Urpagin/urpagin-dot-net.git)>`
 - Go to your GitHub repo → Settings → Webhooks
 - Click "Add Webhook"
 - Fill out the fields and add 

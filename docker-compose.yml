@@ -7,21 +7,24 @@ services:
     ports:
       - "51494:80"
     volumes:
-      - .:/usr/share/nginx/html:ro
+      - ./website:/usr/share/nginx/html:ro
     depends_on:
       - caddy
     restart: always
 
   caddy:
-    image: caddy:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.caddy
     container_name: urpagin-dot-net-webhook-listener
     ports:
       - "42047:9000"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - .:/website
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - GIT_REPO=https://github.com/Urpagin/urpagin-dot-net.git
+      - GIT_REPO=${WEBHOOK_SECRET}
       - WEBHOOK_SECRET=${WEBHOOK_SECRET}
     command: >
       sh -c "
