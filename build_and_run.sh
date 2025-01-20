@@ -1,10 +1,14 @@
-#!/bin/sh
+#!/bin/bahs
 
-# Remove any existing container named "urpagin-dot-net"
-sudo docker rm -f urpagin-dot-net || true
+# Pull the latest changes from Git
+git pull
 
-# Build the new image
-sudo docker build . -t urpagin-dot-net
+# Stop and remove the existing container if it exists
+sudo docker stop urpagin-dot-net || true
+sudo docker container rm urpagin-dot-net || true
 
-# Run the new container
+# Build a new Docker image (ignore any failure if there's no existing image)
+sudo docker build . -t urpagin-dot-net || true
+
+# Run a new container
 sudo docker run --name urpagin-dot-net -d -p 35037:3000 urpagin-dot-net
