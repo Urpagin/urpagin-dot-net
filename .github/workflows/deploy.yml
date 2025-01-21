@@ -20,4 +20,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.PROJECT_PATH }}
-            sudo ./build_and_run.sh
+            ./build_and_run.sh
