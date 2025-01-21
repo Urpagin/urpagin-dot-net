@@ -169,7 +169,7 @@
 
 <br /><br />
 
-<p style="font-size: xx-small;"><a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">mais aussi</a></p>
+<p style="font-size: xx-small;"><a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">but also</a></p>
 
 <br /><br />
 
