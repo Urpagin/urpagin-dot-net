@@ -1,4 +1,4 @@
-#!/bin/bahs
+#!/bin/bash
 
 # Pull the latest changes from Git
 git pull
