@@ -1,6 +1,7 @@
 services:
   urpagin-dot-net:
     container_name: urpagin-dot-net
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
