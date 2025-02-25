@@ -1,9 +1,10 @@
 name: Deploy to Server
 
-on:
-  push:
-    branches:
-      - master
+# Temporary disabled.
+# on:
+#   push:
+#     branches:
+#       - master
 
 jobs:
   deploy:
