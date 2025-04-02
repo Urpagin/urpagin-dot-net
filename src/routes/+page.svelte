@@ -163,8 +163,7 @@
 	<a href="https://archive.org/details/evangelion-fmttm" target="_blank">https://archive.org/details/evangelion-fmttm</a>
 </p>
 <p>
-	This song is best known as the <strong>ending theme</strong> for the anime
-	<em>Neon Genesis Evangelion</em>
+  This song, widely known as <em>Fly Me to the Moon</em>, gained additional recognition as the <strong>ending theme for the anime Neon Genesis Evangelion</strong>. However, its cultural impact extends far beyond that, having been covered by numerous artists and featured in various contexts since its original release.
 </p>
 
 <br /><br />
