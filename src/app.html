@@ -1,14 +1,30 @@
+<script>
+	(function () {
+		const hue = 160 + Math.random() * 40;            // 160–200
+		const saturation = 20 + Math.random() * 30;      // 20%–50%
+		const lightness = 35 + Math.random() * 25;       // 35%–60%
+		const color = `hsl(${hue.toFixed(1)}, ${saturation.toFixed(1)}%, ${lightness.toFixed(1)}%)`;
+		document.documentElement.style.setProperty('--boot-bg', color);
+		document.body.style.backgroundColor = color;
+	})();
+</script>
+
+
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<title>Urpagin's Website</title>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Urpagin's personal website!">
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<title>Urpagin's Website</title>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Urpagin's personal website!">
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
