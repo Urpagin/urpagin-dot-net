@@ -1,24 +1,24 @@
-name: Deploy to Server
+# name: Deploy to Server
 
-# Temporary disabled.
-# on:
-#   push:
-#     branches:
-#       - master
+# # Temporary disabled.
+# # on:
+# #   push:
+# #     branches:
+# #       - master
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-      - name: SSH into server and deploy
-        uses: appleboy/ssh-action@v0.1.4
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ${{ secrets.PROJECT_PATH }}
-            ./build_and_run.sh
+#       - name: SSH into server and deploy
+#         uses: appleboy/ssh-action@v0.1.4
+#         with:
+#           host: ${{ secrets.SSH_HOST }}
+#           username: ${{ secrets.SSH_USER }}
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           script: |
+#             cd ${{ secrets.PROJECT_PATH }}
+#             ./build_and_run.sh
