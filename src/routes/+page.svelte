@@ -245,6 +245,9 @@
 	<a href="https://www.youtube.com/@mai_dq" target="_blank">and most importantly</a>
 </p>
 
+<!-- TODO: Add Clair de Lune & Merry Go Round of Line. Add a separate page for this.-->
+<!-- TODO: rewrite all of this and have a proper website. Portfolio + Music + ... tabs -->
+
 <br /><br />
 
 <hr />
