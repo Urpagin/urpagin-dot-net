@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let currentTime = `${new Date().toLocaleTimeString()}`;
+	let currentTime = generateTime();
 
 	let computeDataPoints = false;
 
@@ -21,11 +21,27 @@
 		// document.body.style.backgroundColor = backgroundColor;
 
 		setInterval(() => {
-			currentTime = `${new Date().toLocaleTimeString()}`;
+			currentTime = generateTime();
+			console.log('currnet time: ' + currentTime);
 		}, 1000);
 	});
 
 	let backgroundColor = '';
+
+	function generateTime() {
+		const now = new Date();
+		const hours = now.getHours();
+		const minutes = now.getMinutes();
+		const seconds = now.getSeconds();
+
+		const parityH = hours % 2 === 0 ? 'even' : 'odd';
+		const parityM = minutes % 2 === 0 ? 'even' : 'odd';
+		const parityS = seconds % 2 === 0 ? 'even' : 'odd';
+		// This string is at max (4*3 + 2) = 14
+		const parityAll = `${parityH}:${parityM}:${parityS}`.padEnd(15, ' ');
+		const two = (n: number) => n.toString().padStart(2, '0');
+		return `${two(hours)}:${two(minutes)}:${two(seconds)} ( ${parityAll})`;
+	}
 
 	function generateBackgroundColor() {
 		const baseHue = 182;
@@ -167,21 +183,29 @@
 </script>
 
 <h1>
-	Welcome to <span on:click={handleUrpaginClick} style="cursor: pointer;">Urpagin.net</span>
+	Welcome to <span
+		role="button"
+		tabindex="0"
+		on:click={handleUrpaginClick}
+		on:keypress={handleUrpaginClick}
+		style="cursor: pointer;">Urpagin.net</span
+	>
 </h1>
-<h1>It is currently: {currentTime}</h1>
+<h1 style="white-space: pre; font-family: monospace;">It is currently: {currentTime}</h1>
 <h2>Welcome to my terrible-looking, seemingly HTML-only website!</h2>
 
-<h2>Some Buttons</h2>
+<h2>A Picture</h2>
 <img
 	src="/images/valheim_thisle_night.webp"
 	alt="Buttons Icon"
-	style="width:384px; height:256px; margin-right:10px;"
+	style="width:50%; height:auto; margin-right:10px;"
 	loading="lazy"
 />
+
 <br /><br />
+<h2>Some Buttons</h2>
 <a href="https://github.urpagin.net" target="_blank" class="button">GitHub</a>
-<br /><br />
+<a href="https://git.urpagin.net/Urpagin" target="_blank" class="button">GitHub Mirror</a>
 <a href="https://blog.urpagin.net" target="_blank" class="button">Blog</a>
 
 <br /><br />
@@ -229,20 +253,21 @@
 	>
 </p>
 <p>
-	This song, widely known as <em>Fly Me to the Moon</em>, gained additional recognition as the
-	<strong>ending theme for the anime Neon Genesis Evangelion</strong>. However, its cultural impact
-	extends far beyond that, having been covered by numerous artists and featured in various contexts
-	since its original release.
+	This song gained additional recognition as the
+	<strong>ending theme for the anime Neon Genesis Evangelion</strong>.<br /> However, its cultural impact
+	extends beyond that, having been covered by numerous artists (e.g., Frank Sinatra) and featured in
+	various contexts since its original release.
 </p>
 
 <br /><br />
 
-<p style="font-size: xx-small;">
-	<a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">but also</a>
-</p>
+<p style="font-size: xx-small;">And these:</p>
 
 <p style="font-size: xx-small;">
-	<a href="https://www.youtube.com/@mai_dq" target="_blank">and most importantly</a>
+	<a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">I</a><br />
+	<a href="https://www.youtube.com/@mai_dq" target="_blank">II</a><br />
+	<a href="/music/clair_de_lune_claude_debussy_suite_bergamasque.ogg" target="_blank">III</a><br />
+	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
 </p>
 
 <br /><br />
