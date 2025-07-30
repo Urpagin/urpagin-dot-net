@@ -22,7 +22,6 @@
 
 		setInterval(() => {
 			currentTime = generateTime();
-			console.log('currnet time: ' + currentTime);
 		}, 1000);
 	});
 
@@ -219,12 +218,16 @@
 <audio
 	bind:this={audioElement}
 	controls
-	preload="none"
+	preload="metadata"
+	crossorigin="anonymous"
 	on:play={handlePlay}
 	on:pause={handleStop}
 	on:ended={handleStop}
 >
-	<source src="/music/fly_me_to_the_moon.ogg" type="audio/flac" />
+	<source
+		src="https://files.urpagin.net/pub/urpagin-dot-net/music/fly_me_to_the_moon.ogg"
+		type="audio/ogg"
+	/>
 	Your browser does not support the audio element.
 </audio>
 <p><em>You may adjust the volume to see a direct consequence on the metrics.</em></p>
@@ -261,12 +264,19 @@
 
 <br /><br />
 
-<p style="font-size: xx-small;">And these:</p>
+<p style="font-size: xx-small;">
+	And these: <a href="https://files.urpagin.net/pub/urpagin-dot-net/music/" target="_blank"
+		>(better listing)</a
+	>
+</p>
 
 <p style="font-size: xx-small;">
 	<a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">I</a><br />
 	<a href="https://www.youtube.com/@mai_dq" target="_blank">II</a><br />
-	<a href="/music/clair_de_lune_claude_debussy_suite_bergamasque.ogg" target="_blank">III</a><br />
+	<a
+		href="https://files.urpagin.net/pub/urpagin-dot-net/music/clair_de_lune_claude_debussy_suite_bergamasque.ogg"
+		target="_blank">III</a
+	><br />
 	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
 </p>
 
