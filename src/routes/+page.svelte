@@ -205,7 +205,7 @@
 <h2>Some Buttons</h2>
 <a href="https://github.urpagin.net" target="_blank" class="button">GitHub</a>
 <a href="https://git.urpagin.net/Urpagin" target="_blank" class="button">GitHub Mirror</a>
-<a href="https://blog.urpagin.net" target="_blank" class="button">Blog</a>
+<a href="https://blog.urpagin.net" target="_blank" class="button">WordPress Blog</a>
 
 <br /><br />
 

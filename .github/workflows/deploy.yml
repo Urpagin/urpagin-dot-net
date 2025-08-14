@@ -1,13 +1,13 @@
 name: Deploy to Server
 
 #Temporary disabled.
-# on:
-#   push:
-#     branches:
-#       - master
+on:
+  push:
+    branches:
+      - master
 
 # Only runs manually.
-on: workflow_dispatch
+#on: workflow_dispatch
 
 jobs:
   deploy:
@@ -24,4 +24,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.PROJECT_PATH }}
-            ./build_and_run.sh
+            ./update.sh
