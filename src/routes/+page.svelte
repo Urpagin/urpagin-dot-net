@@ -277,7 +277,7 @@
 		href="https://files.urpagin.net/pub/urpagin-dot-net/music/clair_de_lune_claude_debussy_suite_bergamasque.ogg"
 		target="_blank">III</a
 	><br />
-	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
+	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a><br />
 	<a href="https://f.urpagin.net/pub/urpagin-dot-net/music/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
 </p>
 
@@ -293,6 +293,10 @@
 <p>
 	<strong>Source:</strong>
 	<a href="https://github.com/Urpagin/urpagin-dot-net" target="_blank">Available on GitHub</a>
+</p>
+
+<p>
+	Site now in possible collaboration with a <a href="https://github.com/Fare-spec" target="_blank_">friend of mine</a>~
 </p>
 
 <style>
