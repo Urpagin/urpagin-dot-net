@@ -278,6 +278,7 @@
 		target="_blank">III</a
 	><br />
 	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
+	<a href="https://f.urpagin.net/pub/urpagin-dot-net/music/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
 </p>
 
 <br /><br />
