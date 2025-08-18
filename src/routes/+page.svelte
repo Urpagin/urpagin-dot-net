@@ -183,12 +183,12 @@
 
 <h1>
 	Welcome to <span
-		role="button"
-		tabindex="0"
-		on:click={handleUrpaginClick}
-		on:keypress={handleUrpaginClick}
-		style="cursor: pointer;">Urpagin.net</span
-	>
+	role="button"
+	tabindex="0"
+	on:click={handleUrpaginClick}
+	on:keypress={handleUrpaginClick}
+	style="cursor: pointer;">Urpagin.net</span
+>
 </h1>
 <h1 style="white-space: pre; font-family: monospace;">It is currently: {currentTime}</h1>
 <h2>Welcome to my terrible-looking, seemingly HTML-only website!</h2>
@@ -252,7 +252,7 @@
 <p>
 	<strong>Source (original FLAC quality):</strong>
 	<a href="https://archive.org/details/evangelion-fmttm" target="_blank"
-		>https://archive.org/details/evangelion-fmttm</a
+	>https://archive.org/details/evangelion-fmttm</a
 	>
 </p>
 <p>
@@ -266,8 +266,8 @@
 
 <p style="font-size: xx-small;">
 	And these: <a href="https://files.urpagin.net/pub/music/featured" target="_blank"
-		>(better listing)</a
-	>
+>(better listing)</a
+>
 </p>
 
 <p style="font-size: xx-small;">
@@ -277,8 +277,10 @@
 		href="https://files.urpagin.net/pub/music/featured/clair_de_lune_claude_debussy_suite_bergamasque.ogg"
 		target="_blank">III</a
 	><br />
-	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
-	<a href="https://f.urpagin.net/pub/music/featured/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
+	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a><br />
+	<a
+		href="https://f.urpagin.net/pub/music/featured/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus"
+		target="_blank">V</a>
 
 </p>
 
@@ -301,45 +303,45 @@
 </p>
 
 <style>
-	.button {
-		display: inline-block;
-		background-color: #007bff;
-		color: white;
-		padding: 10px 20px;
-		font-size: 16px;
-		border: none;
-		border-radius: 5px;
-		text-align: center;
-		text-decoration: none;
-		cursor: pointer;
-	}
+    .button {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
-	.button:hover {
-		background-color: #0056b3;
-	}
+    .button:hover {
+        background-color: #0056b3;
+    }
 
-	:global(body) {
-		font-family: Arial, sans-serif;
-		line-height: 1.6;
-		margin: 20px;
-		background-color: var(--boot-bg, cadetblue);
-	}
+    :global(body) {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: var(--boot-bg, cadetblue);
+    }
 
-	h1,
-	h2,
-	h3 {
-		color: #333;
-	}
+    h1,
+    h2,
+    h3 {
+        color: #333;
+    }
 
-	audio {
-		margin-top: 10px;
-	}
+    audio {
+        margin-top: 10px;
+    }
 
-	a {
-		text-decoration: none;
-	}
+    a {
+        text-decoration: none;
+    }
 
-	p {
-		margin: 5px 0;
-	}
+    p {
+        margin: 5px 0;
+    }
 </style>
