@@ -265,7 +265,7 @@
 <br /><br />
 
 <p style="font-size: xx-small;">
-	And these: <a href="https://files.urpagin.net/pub/urpagin-dot-net/music/" target="_blank"
+	And these: <a href="https://files.urpagin.net/pub/music/featured" target="_blank"
 		>(better listing)</a
 	>
 </p>
@@ -274,11 +274,11 @@
 	<a href="https://youtu.be/Dp2SJN4UiE4" target="_blank">I</a><br />
 	<a href="https://www.youtube.com/@mai_dq" target="_blank">II</a><br />
 	<a
-		href="https://files.urpagin.net/pub/urpagin-dot-net/music/clair_de_lune_claude_debussy_suite_bergamasque.ogg"
+		href="https://files.urpagin.net/pub/music/featured/clair_de_lune_claude_debussy_suite_bergamasque.ogg"
 		target="_blank">III</a
 	><br />
 	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
-	<a href="https://f.urpagin.net/pub/urpagin-dot-net/music/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
+	<a href="https://f.urpagin.net/pub/music/featured/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
 </p>
 
 <br /><br />
