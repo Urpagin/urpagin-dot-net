@@ -279,6 +279,7 @@
 	><br />
 	<a href="https://youtu.be/J6qIzKxmW8Y" target="_blank">IV</a>
 	<a href="https://f.urpagin.net/pub/music/featured/thanatos-suite_neon-genesis-evangelion_shiro-sagisu_yt_iIG-4qoO64U.opus" target="_blank">V</a>
+
 </p>
 
 <br /><br />
@@ -293,6 +294,10 @@
 <p>
 	<strong>Source:</strong>
 	<a href="https://github.com/Urpagin/urpagin-dot-net" target="_blank">Available on GitHub</a>
+</p>
+
+<p>
+	Site now in possible collaboration with a <a href="https://github.com/Fare-spec" target="_blank_">friend of mine</a>~
 </p>
 
 <style>
