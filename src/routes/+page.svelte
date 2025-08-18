@@ -225,7 +225,7 @@
 	on:ended={handleStop}
 >
 	<source
-		src="https://files.urpagin.net/pub/urpagin-dot-net/music/fly_me_to_the_moon.ogg"
+		src="https://files.urpagin.net/pub/music/featured/fly_me_to_the_moon.ogg"
 		type="audio/ogg"
 	/>
 	Your browser does not support the audio element.
