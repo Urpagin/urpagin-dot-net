@@ -302,6 +302,11 @@
 	Site now in possible collaboration with a <a href="https://github.com/Fare-spec" target="_blank_">friend of mine</a>~
 </p>
 
+<br>
+
+<p>Idea/ToDo: I want to ditch all this Svelte nonsense and host this this website as a
+single binary using the C Mongoose network library.</p>
+
 <style>
     .button {
         display: inline-block;
